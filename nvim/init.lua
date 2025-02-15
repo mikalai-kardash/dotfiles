@@ -2,12 +2,13 @@ require("config.lazy")
 
 -- Set <space> as the leader key
 -- See ':help mapleader'
-vim.g.mapleader = ' ' 
+vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+vim.g.have_nerd_font = true
 
-require('options')
-require('keymaps')
+require("options")
+require("keymaps")
 
 -- Setup lazy.nvim
 require("lazy").setup({
@@ -22,6 +23,9 @@ require("lazy").setup({
 	checker = { enabled = true },
 })
 
-require('keymaps.telescope')
+require("telescope").load_extension("fzf")
+require("keymaps.zenmode")
 
-require('telescope').load_extension('fzf')
+vim.g.netrw_banner = 0
+vim.g.netrw_browse_split = 0
+vim.g.netrw_winsize = 25
