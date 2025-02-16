@@ -14,11 +14,11 @@ return {
 		{
 			"<leader>pws",
 			function() 
-				local word = vim.fn.expand("<cword>")
+				local word = vim.fn.expand("<cWORD>")
 				local builtin = require('telescope.builtin')
 				builtin.grep_string({ search = word })
 			end,
-			desc = "Find files",
+			desc = "Find text under cursor",
 		},
 	},
 }

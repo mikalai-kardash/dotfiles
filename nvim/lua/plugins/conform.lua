@@ -2,9 +2,13 @@ return {
 	"stevearc/conform.nvim",
 	opts = {
 		notify_on_error = false,
-		formatter_by_ft = {
+		formatters_by_ft = {
 			lua = { "stylua" },
-			gp = { "gofmt", "gofumpt", "goimports" },
+			python = { "isort", "black" },
+			go = { "gofmt", "gofumpt", "goimports" },
 		},
 	},
+	config = function(_, opts)
+		require("conform").setup(opts)
+	end,
 }

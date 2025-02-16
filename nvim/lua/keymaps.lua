@@ -2,11 +2,11 @@ local normal = function(keys, command, settings)
 	vim.keymap.set("n", keys, command, settings)
 end
 
-normal("<Esc>", "<cmd>nohlsearch<CR>")
-normal("<Leader>pv", vim.cmd.Ex, { desc = "(P)roject (V)iew" })
-normal("<Leader>ff", function()
+normal("<esc>", "<cmd>nohlsearch<cr>")
+normal("<leader>pv", vim.cmd.Ex, { desc = "(P)roject (V)iew" })
+normal("<leader>f", function()
 	require("conform").format({
 		async = true,
-		lsp_fallback = true,
+		lsp_format = "fallback",
 	})
 end, { desc = "(F)file format" })
