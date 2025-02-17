@@ -6,7 +6,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
 require("options")
-require("keymaps")
 
 -- Setup lazy.nvim
 require("lazy").setup({
@@ -22,7 +21,9 @@ require("lazy").setup({
 })
 
 require("telescope").load_extension("fzf")
+require("keymaps")
 require("keymaps.zenmode")
+require("keymaps.harpoon")
 
 vim.g.netrw_banner = 0
 vim.g.netrw_browse_split = 0

@@ -3,7 +3,7 @@ return {
 	config = function()
 		require("trouble").setup({})
 
-		vim.keymap.set("n", "<leader>t", function() 
+		vim.keymap.set("n", "<leader>t", function()
 			require("trouble").toggle({
 				mode = "diagnostics",
 			})

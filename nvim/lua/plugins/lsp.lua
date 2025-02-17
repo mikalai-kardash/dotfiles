@@ -33,7 +33,7 @@ return {
 		local cmp = require("cmp")
 		cmp.setup({
 			mapping = cmp.mapping.preset.insert({
-				["C-<space>"] = cmp.mapping.complete({}),
+				-- ["C-<space>"] = cmp.mapping.complete({}),
 				["<cr>"] = cmp.mapping.confirm({ select = true }),
 				["<C-e>"] = cmp.mapping.abort(),
 				["<esc>"] = cmp.mapping.abort(),
