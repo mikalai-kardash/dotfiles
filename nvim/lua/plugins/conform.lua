@@ -6,6 +6,12 @@ return {
 			lua = { "stylua" },
 			python = { "isort", "black" },
 			go = { "gofmt", "gofumpt", "goimports" },
+            yml = { "yamlfix" },
+            proto = { "buf" },
+            xml = { "xmlformatter" },
+            markdown = { "markdownfmt" },
+            sql = { "pg_format" },
+            sh = { "shfmt" },
 		},
 	},
 	config = function(_, opts)

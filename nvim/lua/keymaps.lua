@@ -49,7 +49,14 @@ normal("<leader>f", function()
 		async = true,
 		lsp_format = "fallback",
 	})
-end, { desc = "File format" })
+end, { desc = "Format file" })
+
+vim.keymap.set("v", "<leader>f", function()
+	require("conform").format({
+		async = true,
+		lsp_format = "fallback",
+	})
+end, { desc = "Format selection" })
 
 -- NO-OP
 normal("Q", "<nop>")
