@@ -13,9 +13,9 @@ return {
 		},
 		{
 			"<leader>pws",
-			function() 
+			function()
 				local word = vim.fn.expand("<cWORD>")
-				local builtin = require('telescope.builtin')
+				local builtin = require("telescope.builtin")
 				builtin.grep_string({ search = word })
 			end,
 			desc = "Find text under cursor",

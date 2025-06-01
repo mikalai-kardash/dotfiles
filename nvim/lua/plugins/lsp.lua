@@ -19,7 +19,7 @@ return {
 	config = function()
 		require("mason").setup({})
 		require("mason-lspconfig").setup({
-			ensure_installed = { "lua_ls", "gopls" },
+			ensure_installed = { "lua_ls", "gopls", "golangci_lint_ls", "zls" },
 			handlers = {
 				function(server_name)
 					local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -29,6 +29,23 @@ return {
 				end,
 			},
 		})
+		require("lspconfig").lua_ls.setup({
+			settings = {
+				Lua = {
+					diagnostics = {
+						disable = { "missing-fields" },
+					},
+				},
+			},
+		})
+		require("lspconfig").gopls.setup({})
+		require("lspconfig").zls.setup({
+            settings = {
+                zls = {
+                    semantic_tokens = "partial",
+                },
+            },
+        })
 
 		local cmp = require("cmp")
 		cmp.setup({

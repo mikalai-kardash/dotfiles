@@ -24,6 +24,7 @@ require("telescope").load_extension("fzf")
 require("keymaps")
 require("keymaps.zenmode")
 require("keymaps.harpoon")
+require("keymaps.neotest")
 
 vim.g.netrw_banner = 0
 vim.g.netrw_browse_split = 0
