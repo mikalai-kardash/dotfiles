@@ -29,7 +29,8 @@ return {
 				end,
 			},
 		})
-		require("lspconfig").lua_ls.setup({
+
+		vim.lsp.config("lua_ls", {
 			settings = {
 				Lua = {
 					diagnostics = {
@@ -38,14 +39,14 @@ return {
 				},
 			},
 		})
-		require("lspconfig").gopls.setup({})
-		require("lspconfig").zls.setup({
-            settings = {
-                zls = {
-                    semantic_tokens = "partial",
-                },
-            },
-        })
+		vim.lsp.config("gopls", {})
+		vim.lsp.config("zls", {
+			settings = {
+				zls = {
+					semantic_tokens = "partial",
+				},
+			},
+		})
 
 		local cmp = require("cmp")
 		cmp.setup({
